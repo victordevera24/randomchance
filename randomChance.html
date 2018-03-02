@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>randomChance</title>
+	<meta charset="utf-8">
+	<script>
+		var quarters = 50;
+		function randomChance() {
+			if ( quarters > 0) {
+				quarters -= 1;
+				if( Math.trunc(Math.random() * 100) + 1 == 24) {
+					var win = Math.trunc(Math.random() * 50) + 50;
+					console.log('Winner! You won ' + win + ' quarters!')
+					quarters += win;
+					console.log( "Total quarters:" + quarters);
+				}
+				else {
+					console.log("Loser Total quarters:" + quarters);
+				}
+			}
+			else {
+				console.log("Out of quarters");
+			} 
+		}
+		// randomChance() in console
+	</script>
+</head>
+</html>
